@@ -7,7 +7,7 @@ Report the mean quality score per base from the output of FastQC.
 FastQC creates an HTML file and a ZIP file per sample, for example sample1_fastqc.zip. qc_summary.sh takes the ZIP files, looks for a file named fastqc_data.txt inside, then extracts the information in the section labeled "Per base sequence quality pass":
 
 ```
-Per base sequence quality	pass
+Per base sequence quality pass
 #Base	Mean	Median	Lower Quartile	Upper Quartile	10th Percentile	90th Percentile
 1	32.94	34.0	34.0	34.0	32.0	34.0
 ```
