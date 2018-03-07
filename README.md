@@ -20,7 +20,7 @@ Base	sample1_1	sample1_2	sample2_1	sample2_2
 ```
 
 ## Variables
-Prior to running qc_summary.sh, several variables require editing:
+Prior to running qc_summary.sh, some variables require editing:
 ```
 input_prefix='CB'
 ```
