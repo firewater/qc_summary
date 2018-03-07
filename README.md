@@ -1,7 +1,7 @@
 # qc_summary
 Report the mean quality score per base from the output of FastQC.
 
-[FastQC](http://bioinformatics.babraham.ac.uk/projects/fastqc/) is used in bioinformatics as a quality control tool for high throughput sequence data. qc_summary.sh takes FastQC's output and reports the mean quality score per base.
+[FastQC](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/) is used in bioinformatics as a quality control tool for high throughput sequence data. qc_summary.sh takes FastQC's output and reports the mean quality score per base.
 
 ## Input
 FastQC creates an HTML file and a ZIP file per sample, for example sample1_fastqc.zip. qc_summary.sh takes the ZIP files, looks for a file named fastqc_data.txt inside, then extracts the information in the section labeled "Per base sequence quality pass":
