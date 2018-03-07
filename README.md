@@ -4,7 +4,6 @@ Report the mean quality score per base from the output of FastQC.
 [FastQC](www.bioinformatics.babraham.ac.uk/projects/fastqc/) is used in bioinformatics as a quality control tool for high throughput sequence data. qc_summary.sh takes FastQC's output and reports the mean quality score per base.
 
 ## Input
-
 FastQC creates an HTML file and a ZIP file per sample, for example sample1_fastqc.zip. qc_summary.sh takes the ZIP files, looks for a file named fastqc_data.txt inside, then extracts the information in the section labeled "Per base sequence quality pass":
 
 ```
@@ -13,7 +12,6 @@ Per base sequence quality	pass
 1	32.94	34.0	34.0	34.0	32.0	34.0
 ```
 ## Output
-
 qc_summary.sh creates a tab-separated value (TSV) file named qc_summary.tsv. Here is an example of its contents:
 
 ```
@@ -22,7 +20,6 @@ Base	sample1_1	sample1_2	sample2_1	sample2_2
 ```
 
 ## Variables
-
 Prior to running qc_summary.sh, several variables require editing:
 ```
 input_prefix='CB'
@@ -45,8 +42,11 @@ input_sort_key='1.3'
 
 This ultimately effects the ordering of the samples in the output file. In our example above, we want to sort by the first three characters: CB followed by a number.
 
-## Prerequisites
+## Usage
+1. Place qc_summary.sh in the same directory as the ZIP files
+2. In a terminal: bash ./qc_summary.sh
 
+## Prerequisites
 * Bash
 
 ## Tested On
@@ -54,9 +54,7 @@ This ultimately effects the ordering of the samples in the output file. In our e
 * RHEL 6,7
 
 ## Built With
-
 * [Bash](https://www.gnu.org/software/bash/) - Programming language
 
 ## License
-
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
